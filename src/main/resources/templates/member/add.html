@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header::head(~{::title})">
+    <title>新規メンバー</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header th:replace="header::header"></header>
+    <h1>新規メンバー画面</h1>
+    <ol  cellpadding="0" cellspacing="0">
+        <form th:action="@{/member/list}" th:object="${memberForm}" method="post">
+
+            <div th:insert="member/form"></div>
+            <button type="submit">登録</button>
+<!--            <input type="button" name="add" value="新規追加" >-->
+<!--            <input th:action="@{/menu}" type="button" name="back" value="メニュー画面に戻る">-->
+        </form>
+    </ol>
+
+</body>
+</html>

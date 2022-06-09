@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header::head(~{::title})">
+    <title>新規成績</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header th:replace="header::header"></header>
+    <h1>新規成績画面</h1>
+    <ol  cellpadding="0" cellspacing="0">
+        <div th:insert="score/form"></div>
+
+<!--        <form th:action="@{/score/list}" th:object="${scoreForm}" method="post">-->
+<!--            <button type="submit">登録</button>-->
+<!--            <input type="button" name="add" value="新規追加" >-->
+<!--            <input th:action="@{/menu}" type="button" name="back" value="メニュー画面に戻る">-->
+<!--        </form>-->
+    </ol>
+
+</body>
+</html>

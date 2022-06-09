@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header::head(~{::title})">
+
+    <title>新人教育管理サイト</title>
+    <a href="header.html"></a>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header th:replace="header::header"></header>
+    <h1>株式会社ソフトユージング新人教育管理サイト</h1>
+    <p1>メニュー</p1></br>
+    <ol  cellpadding="0" cellspacing="0">
+        <div>
+
+            <form method="post" th:action="@{member/add}" th:object="${memberForm}">
+                <button type="submit">1.新規メンバー</button>
+            </form>
+            <form method="post" th:action="@{member/list}" th:object="${memberForm}">
+                <button type="submit">2.メンバー管理</button>
+            </form>
+            <form method="post" th:action="@{score/add}" th:object="${scoreForm}">
+                <button type="submit">3.新規成績</button>
+            </form>
+            <form method="post" th:action="@{score/list}" th:object="${scoreForm}">
+                <button type="submit">4.成績管理</button>
+            </form>
+
+        </div>
+
+        　　　
+        <td onclick="deleteRow(this)">
+            <input type="button" name="clear" value="削除">
+        </td>　
+        <td onClick="chData(this)">
+            <input type="button" name="change" value="変更">
+        </td>
+
+        </br>
+
+    </ol>
+    <footer>
+        <hr>
+        <h4>Softusing.co.jp</h4>
+    </footer>
+</body>
+<script>
+
+</script>
+<style>
+        h1{
+            text-align:center;
+            font-size: 30px;
+        }
+        p1{
+            text-align:center;
+            font-size: 24px;
+        }
+        ol{
+            border: 1px black solid;
+            margin: auto;
+            width: 800px;
+            height: 800px;
+            text-align:center;
+            font-size: 22px;
+            padding-inline-start: 70px;
+            padding-inline-end: 70px;
+        }
+
+    </style>
+</html>

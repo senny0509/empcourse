@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>新規成績</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<ol  cellpadding="0" cellspacing="0">
+  <form>
+    名前:　<input type="test" name="name" size="7">
+    科目 :　
+
+    <select id="sel" name="course">
+      <option value="" selected disabled hidden>　　</option>
+      <option value="java">JAVA</option>
+      <option value="html">HTML</option>
+      <option value="js">JS</option>
+      <option value="ccharp">C#</option>
+    </select>
+
+    成績:　<input type="test" name="age" size="7"></br></br>
+  </form>
+  <div id="btn">
+
+    <form th:action="@{/menu}" method="get">
+      <button type="submit">メニュー画面に戻る</button>
+    </form>
+
+    <form th:action="@{/score/list}" th:object="${scoreForm}" method="post">
+      <button type="submit">更新する</button>
+    </form>
+
+  </div>
+</ol>
+
+</body>
+</html>
+
